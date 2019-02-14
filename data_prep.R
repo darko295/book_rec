@@ -7,7 +7,7 @@ ratings <- read.csv("data/ratings.csv", header = TRUE)
 seed <- 20
 set.seed(seed)
 
-# for better efficiency, we will only consider ratings made by 50% of total users
+# for better efficiency, we will only consider ratings made by 10% of total users
 sample_size <- 0.1
 users <- unique(ratings$user_id)
 sample_users <- sample(users, round(sample_size * length(users)))
